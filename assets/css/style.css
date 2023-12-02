@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container{
+    display: grid;
+   grid-template-areas:
+   'header header header header header'
+   'sidebar main main main main'
+   'footer footer footer footer footer'
+   ;
+    
+}
+
+.grid-item{
+    border: 0px solid #333;
+}
+
+.header{
+grid-area: header;
+min-height: 120px;
+background-color:#14192c;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.header .titulo{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 40px;
+    color: #FAD9B1;
+    
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: #e7633B;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    width: 300px;
+    
+}
+
+.sidebar h5{
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #FAD9B1;
+
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sidebar ul li{
+    list-style: none;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FAD9B1;
+}
+
+.sidebar span{
+    opacity: 0.6;
+}
+
+.main{
+    grid-area: main;
+    background-color: #ffffff;
+}
+
+.main .productos{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+margin: 30px 0px;
+justify-content: center;
+gap: 10px;
+
+
+
+}
+
+.main .productos .producto{
+    width: 32%;
+    height:100%;
+    border: 1px solid #f7f7f7; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px dashed #FAD9B1;
+    overflow: hidden;
+
+}
+
+.main .productos .producto:hover{
+    border: 1px dashed #e7633B;
+
+}
+
+.main .productos .producto h5{
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    color: #e7633B;
+     
+}
+.main .productos .producto p{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color:#14192c;
+    font-weight: 400;
+     
+}
+
+.main .productos .producto button{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: #e7633B;
+
+    background-color: #FAD9B1;
+     
+}
+.main .productos .producto:hover button{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: #FAD9B1;
+    
+    background-color: #e7633B;
+     
+}
+.main .productos .producto img{
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    transition: ease-in-out .4s;
+ 
+    
+}
+.main .productos .producto:hover img{
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    transform: scale(0.8);
+ 
+    
+}
+
+.footer{
+    grid-area: footer;
+    min-height: 50px;
+    background-color:#14192c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
